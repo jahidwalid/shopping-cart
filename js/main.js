@@ -17,6 +17,7 @@ function handleProductChange(product, isIncrease){
     document.getElementById(product+"-total").innerText=productTotal;
    handleCheckout()
 }
+// ========== this fun for product total & product tax ========
 function handleCheckout(){
    const laptopCount=getItems('laptop');
    const iphoneCount=getItems('iphone');
@@ -29,8 +30,14 @@ function handleCheckout(){
    document.getElementById('granted-total').innerText=grantedTotal;
 
 }
+// ====== this fun for get product input ========
 function getItems(product){
    const productInput=document.getElementById(product+"-count");
    const productCount=parseInt(productInput.value);
    return productCount;
+}
+// ======= this fun for checkout button alert ========
+function checkOut(){
+    alert("Thanks for purchasing with us");
+    location.reload();
 }
