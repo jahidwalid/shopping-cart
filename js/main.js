@@ -18,8 +18,8 @@ function handleProductChange(product, isIncrease){
    handleCheckout()
 }
 function handleCheckout(){
-    const laptopCount=document.getElementById('laptop-count').value;
-    const iphoneCount=document.getElementById('iphone-count').value;
+   const laptopCount=getItems('laptop');
+   const iphoneCount=getItems('iphone');
    const totalPrice=parseInt(laptopCount) * 245 + parseInt(iphoneCount) *150; 
    console.log(totalPrice)
    document.getElementById('sub-total').innerText=totalPrice;
@@ -28,4 +28,9 @@ function handleCheckout(){
    const grantedTotal=tax+totalPrice;
    document.getElementById('granted-total').innerText=grantedTotal;
 
+}
+function getItems(product){
+   const productInput=document.getElementById(product+"-count");
+   const productCount=parseInt(productInput.value);
+   return productCount;
 }
