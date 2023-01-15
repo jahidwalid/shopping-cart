@@ -1,16 +1,19 @@
-
-let macPriceText=document.getElementById('mac-price-text').innerText;
 function handleProductChange(product, isIncrease){
-    let productInput=document.getElementById('input-mac');
+    let productInput=document.getElementById(product+"-count");
     let productCount=parseInt(productInput.value);
-    console.log(productCount);
-    const newProductCount=productInput;
-    
-
+    let newProductCount=productCount;
     if(isIncrease==true){
-        newProductCount.value=productCount+1;
-    }else if(isIncrease==false){
-        newProductCount.value=productCount-1;
+        newProductCount++;
+    }else if(isIncrease==false && productCount>1){
+        newProductCount--;
     }
-    
+    productInput.value=newProductCount;
+    let productTotal;
+    if(product=="laptop"){
+        productTotal=newProductCount*245;
+    }else{
+        productTotal=newProductCount*150;
+    }
+    document.getElementById(product+"-total").innerText=productTotal;
+
 }

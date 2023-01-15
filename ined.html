@@ -35,13 +35,13 @@
         <div class="col-lg-5">
             <div class="product-input-box d-flex justify-content-center">
                 <button onclick="handleProductChange('laptop', false)" class="btn btn-danger m-2">Remove</button>
-                <input id="input-mac" value="50" type="number" class="form-control m-2">
+                <input id="laptop-count" value="0" type="number" class="form-control m-2">
                 <button onclick="handleProductChange('laptop', true)" id="mac-add" class="btn btn-primary m-2">Add</button>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="product-prices-box text-center">
-                <h4>৳<Span id="mac-price-text">100</Span></h4>
+                <h4>৳<Span id="laptop-total">0</Span></h4>
             </div>
         </div>
     </div>
@@ -58,14 +58,14 @@
         </div>
         <div class="col-lg-5">
             <div class="product-input-box d-flex justify-content-center">
-                <button class="btn btn-danger m-2">Remove</button>
-                <input id="input-iphone" type="number" class="form-control m-2">
-                <button id="iphone-add" class="btn btn-primary m-2">Add</button>
+                <button onclick="handleProductChange('iphone', false)"  class="btn btn-danger m-2">Remove</button>
+                <input id="iphone-count" value="1" type="number" class="form-control m-2">
+                <button onclick="handleProductChange('iphone', true)" id="iphone-add" class="btn btn-primary m-2">Add</button>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="product-prices-box text-center">
-                <h4>৳<Span>0</Span></h4>
+                <h4>৳<Span id="iphone-total">0</Span></h4>
             </div>
         </div>
     </div>
